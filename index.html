@@ -1,182 +1,118 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Corporate Couture: The High Heeled Hustle - Game Pack</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f8f8f8;
-            margin: 0;
-            padding: 0;
-        }
-        .tabs {
-            overflow: hidden;
-            background-color: #fff;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .tablinks {
-            background-color: inherit;
-            float: left;
-            border: none;
-            outline: none;
-            cursor: pointer;
-            padding: 14px 16px;
-            transition: 0.3s;
-            font-size: 17px;
-            color: #555;
-        }
-        .tablinks:hover {
-            background-color: #ddd;
-        }
-        .tablinks.active {
-            background-color: #fae1dd;
-            color: #d6538c;
-        }
-        .tabcontent {
-            display: none;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-top: none;
-            animation: fadeEffect 1s;
-            background-color: #fff;
-        }
-        @keyframes fadeEffect {
-            from {opacity: 0;}
-            to {opacity: 1;}
-        }
-        h2 {
-            color: #d6538c;
-        }
-        p {
-            line-height: 1.6;
-            color: #666;
-        }
-    </style>
+    <title>Corporate Couture: The High Heeled Hustle</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="tabs">
-        <button class="tablinks" onclick="openTab(event, 'Home')">Home</button>
-        <button class="tablinks" onclick="openTab(event, 'Rules')">Game Rules</button>
-        <button class="tablinks" onclick="openTab(event, 'Characters')">Characters</button>
-        <button class="tablinks" onclick="openTab(event, 'Moral')">Moral of the Game</button>
-    </div>
-
-    <div id="Home" class="tabcontent">
-        <h2>Welcome to Corporate Couture</h2>
-        <p>Brief introduction and overview of the game. The objective of Corporate Couture is to be the first player to reach the "Job Offer" space, symbolising successful job attainment.</p>
-    </div>
-    <div id="Rules" class="tabcontent">
-        <h2>Game Rules</h2>
-        <p>How the game works:
-
-
-- Starting the Game:
-  - Players pick out figurines to navigate the board from a dustbag, and get assigned their random characters.
-  - The "Nepotism baby" player starts each round. If  "Nepotism Baby" is not drawn, all players spin a wheel, and the highest scorer goes first, with the order proceeding clockwise.
-
-- Movement:
-  - Players move by spinning the wheels.
-  - If a player gets the "Nepotism baby" figurine, their movement is always doubled, throughout the game.
-
-- Gameplay Interactions:
-  - Players may land on spaces that allow them to pick up "Opportunity" or "Activity" cards.
-  - Actions from different players can affect others' positions on the board, mirroring real-world industry dynamics.
-
-
--*Winning the Game:
-
-  - To win, a player must have at least 1 "Opportunity" card.
-
-  - Players must land exactly on the finish line to win. If a player is near the finish line but cannot land exactly on it on their round, they must continue around the board.
-
-  - A player can also win if they land on an "Activity" card space that moves them directly onto the finish line, even if the move is not exact.
-
-- Board Navigation:
-  - The board does not have a pre-set direction for spaces, allowing for nonlinear progression.
-
-
-Moral of the game
-
-The real life objective of this game is to demonstrate the unbalance of the corporate world in different settings. Do we all truly have the same chances? Are we treated the same when entering a work field? Different privileges can give you different benefits. This game is supposed to show different challenges that you can face in the real world and is supposed to spark dialogue to create potential changes within the industry we wish to work for. 
-
-
-End goal 
-Winner will be the first who crosses the finishing line.</p>
-    </div>
-    <div id="Characters" class="tabcontent">
-        <h2>Characters</h2>
-        <p>Character 1: Nepotism Baby
-Born in Paris, went a boarding school in Switzerland
-Just graduated from a Fashion school in Paris, doing a Masters Luxury Brand Management
-Wants to become the CEO of a big corporate company in the Fashion industry 
-No work experience
-Addicted to shopping 
-
-Character 2: Fashion Nerd 
-Went to a renowned public school in New zealand
-Got a scholarship due to exceptional school grades for a Business Management degree
-Dreams of being Head of PR at LVMH
-Has worked in retail since she was 17 years old 
-Spends her nights watching different Fashion Shows from the past years
-
-Character 3: Business Gal
-Went to a private school in San Francisco
-Went to college in Boston 
-Wants to build a life in Europe, working in Marketing 
-Worked in a small Boutique in Boston for 2 years as a social media manager
-Goes to the gym or enjoys a cocktail night with her friends
-
-Character 4: Marketing Guy
-Born and educated in Antwerpen, Belgium
-Has a Masters degree in International Business Law
-Wants to become rich
-Worked at the Bank of Liechtenstein for a year
-Interested in the stock market and the luxury market
-Spends his weekends watching or playing football with his friends
-
-Character 5: Creative Student
-From Florence, Italy and attended a private high school 
-Got a creativity scholarship for a prestigious Fashion School in London
-Wants to become Creative Director or Designer at a premium or high-end brand
-Worked an intern for a pattern maker and Designer in London
-Spends her afternoons working on paintings and designs and has a big interest in Interior Design
-
-Character 6: The Gay  
-Born in Spain, raised in Madrid
-Attended a private school and graduated with a Masters degree in Art Direction & Design Management
-Wants to work in Social Media, PR or Event Management at a Fashion related company
-Worked at Zara for 3 years and did an internship as Social Media Manager for a boutique that belongs to his parents friend
-Spends his summers with his friends in Marbella 
-
-</p>
-    </div>
-    <div id="Moral" class="tabcontent">
-        <h2>Moral of the Game</h2>
-        <p>The real life objective of this game is to demonstrate the unbalance of the corporate world in different settings.</p>
-    </div>
-
-    <script>
-        function openTab(evt, cityName) {{
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tabcontent");
-            for (i = 0; i < tabcontent.length; i++) {{
-                tabcontent[i].style.display = "none";
-            }}
-            tablinks = document.getElementsByClassName("tablinks");
-            for (i = 0; i < tablinks.length; i++) {{
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }}
-            document.getElementById(cityName).style.display = "block";
-            evt.currentTarget.className += " active";
-        }}
-        // Default open
-        document.addEventListener("DOMContentLoaded", function() {{
-            document.getElementById("Home").style.display = "block";
-            document.getElementsByClassName("tablinks")[0].className += " active";
-        }});
-    </script>
+    <header>
+        <h1>Corporate Couture: The High Heeled Hustle</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Game Pack</h2>
+            <p><strong>Duration:</strong> Approximately 20min</p>
+            <p><strong>Players:</strong> 2-5 players</p>
+            <p><strong>Reward:</strong> The end goal is getting the job.</p>
+            <p><strong>Premise of game:</strong> Young interns enter the workplace for the first time, encounter problems, challenges, opportunities, benefits and have to navigate the circumstances they are put in. The game can be adapted to suit any of the end goals (celebrity stylist's assistant, etc…)</p>
+        </section>
+        <section>
+            <h2>Objective</h2>
+            <p>The objective of Corporate Couture is to be the first player to reach the "Job Offer" space at the end of the board, symbolizing successful job attainment, based on a degree of luck, but also using your knowledge to take advantage of opportunity card boosters.</p>
+        </section>
+        <section>
+            <h2>Setup</h2>
+            <ul>
+                <li>Each player draws a character figurine, each with pre-set personalities and life situations that may dictate how their wheel moves count.</li>
+                <li>Set up the game board, which is laid out with spaces leading from "Start" to "Job Offer."</li>
+                <li>Shuffle and place the Activity Cards and Opportunity Cards in designated piles on the board.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Game Play</h2>
+            <ul>
+                <li>Players take turns spinning the wheel to move forward on the board. The number may multiply depending on who the character is.</li>
+                <li>If a player lands on an Activity Space, they draw an Activity Card which could either advance or set them back based on realistic work-related scenarios; these cards can affect other players' game status as well.</li>
+                <li>Landing on an Opportunity Space allows players to answer the question written on it, read by another player. Answering correctly lets the player move up two additional spaces.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Activity Cards</h2>
+            <p>These cards have random events that could be, "Receive a glowing performance review, move forward 3 spaces," or "Your project fails, move back 2 spaces." These are drawn by the players themselves and they can also affect the position of other players.</p>
+        </section>
+        <section>
+            <h2>Opportunity Cards</h2>
+            <p>Contain questions related to work scenarios and professional etiquette. Correct answers propel the player forward two spaces, while incorrect or no answers result in staying in place.</p>
+        </section>
+        <section>
+            <h2>Winning the Game</h2>
+            <ul>
+                <li>To win, a player must have at least 1 "Opportunity" card.</li>
+                <li>Players must land exactly on the finish line to win. If a player is near the finish line but cannot land exactly on it on their round, they must continue around the board.</li>
+                <li>A player can also win if they land on an "Activity" card space that moves them directly onto the finish line, even if the move is not exact.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Moral of the Game</h2>
+            <p>The real-life objective of this game is to demonstrate the imbalance of the corporate world in different settings. Do we all truly have the same chances? Are we treated the same when entering a work field? Different privileges can give you different benefits. This game is supposed to show different challenges that you can face in the real world and is supposed to spark dialogue to create potential changes within the industry we wish to work for.</p>
+        </section>
+        <section>
+            <h2>Characters</h2>
+            <h3>Character 1: Nepotism Baby</h3>
+            <ul>
+                <li>Born in Paris, went to a boarding school in Switzerland</li>
+                <li>Just graduated from a Fashion school in Paris, doing a Masters in Luxury Brand Management</li>
+                <li>Wants to become the CEO of a big corporate company in the Fashion industry</li>
+                <li>No work experience</li>
+                <li>Addicted to shopping</li>
+            </ul>
+            <h3>Character 2: Fashion Nerd</h3>
+            <ul>
+                <li>Went to a renowned public school in New Zealand</li>
+                <li>Got a scholarship due to exceptional school grades for a Business Management degree</li>
+                <li>Dreams of being Head of PR at LVMH</li>
+                <li>Has worked in retail since she was 17 years old</li>
+                <li>Spends her nights watching different Fashion Shows from the past years</li>
+            </ul>
+            <h3>Character 3: Business Gal</h3>
+            <ul>
+                <li>Went to a private school in San Francisco</li>
+                <li>Went to college in Boston</li>
+                <li>Wants to build a life in Europe, working in Marketing</li>
+                <li>Worked in a small Boutique in Boston for 2 years as a social media manager</li>
+                <li>Goes to the gym or enjoys a cocktail night with her friends</li>
+            </ul>
+            <h3>Character 4: Marketing Guy</h3>
+            <ul>
+                <li>Born and educated in Antwerpen, Belgium</li>
+                <li>Has a Masters degree in International Business Law</li>
+                <li>Wants to become rich</li>
+                <li>Worked at the Bank of Liechtenstein for a year</li>
+                <li>Interested in the stock market and the luxury market</li>
+                <li>Spends his weekends watching or playing football with his friends</li>
+            </ul>
+            <h3>Character 5: Creative Student</h3>
+            <ul>
+                <li>From Florence, Italy and attended a private high school</li>
+                <li>Got a creativity scholarship for a prestigious Fashion School in London</li>
+                <li>Wants to become Creative Director or Designer at a premium or high-end brand</li>
+                <li>Worked as an intern for a pattern maker and Designer in London</li>
+                <li>Spends her afternoons working on paintings and designs and has a big interest in Interior Design</li>
+            </ul>
+            <h3>Character 6: The Gay</h3>
+            <ul>
+                <li>Born in Spain, raised in Madrid</li>
+                <li>Attended a private school and graduated with a Masters degree in Art Direction & Design Management</li>
+                <li>Wants to work in Social Media, PR or Event Management at a Fashion related company</li>
+                <li>Worked at Zara for 3 years and did an internship as Social Media Manager for a boutique that belongs to his parents' friend</li>
+                <li>Spends his summers with his friends in Marbella</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Corporate Couture. All rights reserved.</p>
+    </footer>
 </body>
 </html>
