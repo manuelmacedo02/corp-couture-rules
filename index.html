@@ -4,25 +4,135 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Corporate Couture: The High Heeled Hustle</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fffaf0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #ffcccb;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-family: 'Pacifico', cursive;
+            color: #333;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #ff69b4;
+            padding: 10px;
+        }
+
+        nav button {
+            background: none;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            transition: background-color 0.3s;
+        }
+
+        nav button:hover {
+            background-color: #ff1493;
+        }
+
+        .active-tab {
+            background-color: #ff1493;
+        }
+
+        section {
+            display: none;
+            padding: 20px;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        h2 {
+            color: #ff69b4;
+        }
+
+        h3 {
+            color: #ff69b4;
+            margin-top: 20px;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        footer {
+            background-color: #ffcccb;
+            text-align: center;
+            padding: 10px 0;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+    </style>
+    <script>
+        function showSection(sectionId) {
+            var sections = document.querySelectorAll('section');
+            var buttons = document.querySelectorAll('nav button');
+            sections.forEach(function(section) {
+                section.classList.remove('active');
+            });
+            buttons.forEach(function(button) {
+                button.classList.remove('active-tab');
+            });
+            document.getElementById(sectionId).classList.add('active');
+            document.querySelector('nav button[data-section="' + sectionId + '"]').classList.add('active-tab');
+        }
+    </script>
 </head>
-<body>
+<body onload="showSection('game-pack')">
     <header>
         <h1>Corporate Couture: The High Heeled Hustle</h1>
     </header>
+    <nav>
+        <button data-section="game-pack" onclick="showSection('game-pack')">Game Pack</button>
+        <button data-section="objective" onclick="showSection('objective')">Objective</button>
+        <button data-section="setup" onclick="showSection('setup')">Setup</button>
+        <button data-section="gameplay" onclick="showSection('gameplay')">Game Play</button>
+        <button data-section="cards" onclick="showSection('cards')">Cards</button>
+        <button data-section="winning" onclick="showSection('winning')">Winning</button>
+        <button data-section="moral" onclick="showSection('moral')">Moral</button>
+        <button data-section="characters" onclick="showSection('characters')">Characters</button>
+    </nav>
     <main>
-        <section>
+        <section id="game-pack" class="active">
             <h2>Game Pack</h2>
             <p><strong>Duration:</strong> Approximately 20min</p>
             <p><strong>Players:</strong> 2-5 players</p>
             <p><strong>Reward:</strong> The end goal is getting the job.</p>
             <p><strong>Premise of game:</strong> Young interns enter the workplace for the first time, encounter problems, challenges, opportunities, benefits and have to navigate the circumstances they are put in. The game can be adapted to suit any of the end goals (celebrity stylist's assistant, etc…)</p>
         </section>
-        <section>
+        <section id="objective">
             <h2>Objective</h2>
             <p>The objective of Corporate Couture is to be the first player to reach the "Job Offer" space at the end of the board, symbolizing successful job attainment, based on a degree of luck, but also using your knowledge to take advantage of opportunity card boosters.</p>
         </section>
-        <section>
+        <section id="setup">
             <h2>Setup</h2>
             <ul>
                 <li>Each player draws a character figurine, each with pre-set personalities and life situations that may dictate how their wheel moves count.</li>
@@ -30,7 +140,7 @@
                 <li>Shuffle and place the Activity Cards and Opportunity Cards in designated piles on the board.</li>
             </ul>
         </section>
-        <section>
+        <section id="gameplay">
             <h2>Game Play</h2>
             <ul>
                 <li>Players take turns spinning the wheel to move forward on the board. The number may multiply depending on who the character is.</li>
@@ -38,15 +148,13 @@
                 <li>Landing on an Opportunity Space allows players to answer the question written on it, read by another player. Answering correctly lets the player move up two additional spaces.</li>
             </ul>
         </section>
-        <section>
+        <section id="cards">
             <h2>Activity Cards</h2>
             <p>These cards have random events that could be, "Receive a glowing performance review, move forward 3 spaces," or "Your project fails, move back 2 spaces." These are drawn by the players themselves and they can also affect the position of other players.</p>
-        </section>
-        <section>
             <h2>Opportunity Cards</h2>
             <p>Contain questions related to work scenarios and professional etiquette. Correct answers propel the player forward two spaces, while incorrect or no answers result in staying in place.</p>
         </section>
-        <section>
+        <section id="winning">
             <h2>Winning the Game</h2>
             <ul>
                 <li>To win, a player must have at least 1 "Opportunity" card.</li>
@@ -54,11 +162,11 @@
                 <li>A player can also win if they land on an "Activity" card space that moves them directly onto the finish line, even if the move is not exact.</li>
             </ul>
         </section>
-        <section>
+        <section id="moral">
             <h2>Moral of the Game</h2>
             <p>The real-life objective of this game is to demonstrate the imbalance of the corporate world in different settings. Do we all truly have the same chances? Are we treated the same when entering a work field? Different privileges can give you different benefits. This game is supposed to show different challenges that you can face in the real world and is supposed to spark dialogue to create potential changes within the industry we wish to work for.</p>
         </section>
-        <section>
+        <section id="characters">
             <h2>Characters</h2>
             <h3>Character 1: Nepotism Baby</h3>
             <ul>
