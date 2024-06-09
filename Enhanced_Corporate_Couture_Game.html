@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corporate Couture: The High Heeled Hustle - Game Pack</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+        .tabs {
+            overflow: hidden;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .tablinks {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+            color: #555;
+        }
+        .tablinks:hover {
+            background-color: #ddd;
+        }
+        .tablinks.active {
+            background-color: #fae1dd;
+            color: #d6538c;
+        }
+        .tabcontent {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-top: none;
+            animation: fadeEffect 1s;
+            background-color: #fff;
+        }
+        @keyframes fadeEffect {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+        h2 {
+            color: #d6538c;
+        }
+        p {
+            line-height: 1.6;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="tabs">
+        <button class="tablinks" onclick="openTab(event, 'Home')">Home</button>
+        <button class="tablinks" onclick="openTab(event, 'Rules')">Game Rules</button>
+        <button class="tablinks" onclick="openTab(event, 'Characters')">Characters</button>
+        <button class="tablinks" onclick="openTab(event, 'Moral')">Moral of the Game</button>
+    </div>
+
+    <div id="Home" class="tabcontent">
+        <h2>Welcome to Corporate Couture</h2>
+        <p>Brief introduction and overview of the game. The objective of Corporate Couture is to be the first player to reach the "Job Offer" space, symbolising successful job attainment.</p>
+    </div>
+    <div id="Rules" class="tabcontent">
+        <h2>Game Rules</h2>
+        <p>{text_content[0]}</p>
+        <p>{text_content[1]}</p>
+    </div>
+    <div id="Characters" class="tabcontent">
+        <h2>Characters</h2>
+        <p>{text_content[2]}</p>
+    </div>
+    <div id="Moral" class="tabcontent">
+        <h2>Moral of the Game</h2>
+        <p>The real life objective of this game is to demonstrate the unbalance of the corporate world in different settings.</p>
+    </div>
+
+    <script>
+        function openTab(evt, cityName) {{
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {{
+                tabcontent[i].style.display = "none";
+            }}
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {{
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }}
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }}
+        // Default open
+        document.addEventListener("DOMContentLoaded", function() {{
+            document.getElementById("Home").style.display = "block";
+            document.getElementsByClassName("tablinks")[0].className += " active";
+        }});
+    </script>
+</body>
+</html>
